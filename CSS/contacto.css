@@ -1,0 +1,91 @@
+/* ESTILOS CSS A LA SECCION DE CONTACTO */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { 
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif; 
+    background-image: linear-gradient(
+    0deg, rgba(17, 16, 16, 0.5), rgba(17, 16, 16, 0.5) 
+    ),url("../img/img-contacto.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;  
+}
+
+.form {
+    background-color: rgba(131, 171, 171, 0.5);
+    backdrop-filter: blur(1rem);
+    width: 90%;
+    height: 40%;
+    margin: auto;
+    max-width: 25rem;
+    border-radius: 1rem;
+    padding: 2rem 1rem;
+}
+
+.form-container {
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    grid-auto-columns: 100%;
+}
+
+.form-title {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+    
+}
+
+.form-input {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: .5rem .5rem;
+    outline: none;
+    border: none;
+    border: 1px solid #bbb0b0;
+    border-radius: .2rem;
+    background: #ebdede;
+
+}
+
+.form-input__message {
+    resize: none;
+    padding: .5rem .5rem;
+    margin-bottom: .5rem;
+
+
+}
+
+.form-cta {
+    font-family: inherit;
+    background-color: #089FE0;
+    color: #fff;
+    border: none;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: .3rem 0;
+    border-radius: .2rem;
+    cursor: pointer;
+}
+
+.form-cta:hover {
+    background: #2858db;
+}
+
+@media (max-width:450px){
+    .form {
+        padding: 1rem 1rem;
+    }
+}
+

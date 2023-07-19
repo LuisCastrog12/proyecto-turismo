@@ -1,0 +1,208 @@
+/* ESTILOS CSS A LA SECCION DE CATEGORIAS */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body { 
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;  
+}
+
+nav {
+    height:14vh;
+    width: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, .3);
+    z-index: 100;
+
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: rgb(109, 207, 207);
+    cursor: pointer;
+    padding-left: 1rem;
+    line-height: 6rem;
+}
+
+nav ul {
+    float: right;
+    margin-right: 1rem;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 .8rem;
+    line-height: 6rem;
+
+}
+
+nav li a {
+    color: #fff;
+    font-size: 1rem;
+    padding: .2rem .5rem;
+    font-weight: bold;
+}
+
+nav li a:hover {
+    color: #b3e1e1;
+
+}
+
+nav #icon {
+    color:#b3e1e1;
+    font-size: 2rem;
+    line-height: 6rem;
+    float: right;
+    margin-right: 2.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* Segundo bloque */
+
+.feature {
+    height: auto;
+    background: #f9f9f9;
+    overflow: hidden;
+}
+
+.heading {
+    color: #333;
+    font-size: 2rem;
+    padding: .5rem;
+    padding-top: 8rem;
+    text-align: center;
+    letter-spacing: .5rem;
+}
+
+.feature .card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.feature .card-container .card {
+    width: 18rem;
+    margin: 2rem;
+    background: #fff;
+    border-radius: .5rem;
+    box-shadow: 0 .3rem .5rem rgba(0, 0, 0, .3);
+    overflow: hidden;
+    position: relative;
+}
+
+.feature .card-container .card img {
+    height: 10rem;
+    width: 100%;
+    object-fit: cover;
+}
+.feature .card-container .content {
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+.feature .card-container .content .title {
+    color: #0098a1;
+    font-size: 1rem;
+}
+
+.feature .card-container .content p {
+    color: #333;
+    font-size:1rem;
+    padding: .5rem;
+}
+
+.feature .card-container .content .btn {
+    font-size: 1rem;
+    margin-top: .5rem;
+    height: 2rem;
+    width: 10rem;
+    border-radius: 2rem;
+    outline: none;
+    border: none;
+    background: #0098a1;
+    color: #fff;
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+.feature .card-container .content .btn:hover {
+    background: none;
+    border: .2rem solid #0098a1;
+    color: #0098a1;
+}
+
+/* Tercer bloque */
+
+.heading-2 {
+    color: #333;
+    font-size: 2rem;
+    padding: .5rem;
+    text-align: center;
+    letter-spacing: .5rem;
+}
+
+
+
+
+/* responsive */
+
+@media (max-width:1048px){
+    .logo { font-size: 2rem;
+            padding-left: 3.5rem;
+        }
+
+    nav ul {
+        margin-right: 1.2rem;
+
+    }
+
+    nav a {
+        font-size: 1rem;
+
+    }
+}
+
+@media (max-width: 900px){
+    nav #icon {
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 30vh;
+        background: rgba(0, 0, 0, .3);
+        border-radius: 1rem;
+        top: 6rem;
+        left: -100%;
+        text-align: center;
+        transition:  all .5s;
+    }
+
+    nav li {
+        display: block;
+        width: 100%;
+        height: 10vh;
+    }
+
+    nav a {
+        font-size: 1.2rem;
+
+    }
+
+    nav ul.show {
+        left: 0;
+    }
+}

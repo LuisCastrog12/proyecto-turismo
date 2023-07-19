@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@200;300;400;500;600&display=swap');
+
+/* ESTILOS CSS AL BUSCADOR */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: 'Poppins', cursive;
+} 
+
+body{
+  background: #f2f2f2;
+}
+
+.container{
+  max-width:87.5rem ;
+  width: 100%;
+  margin: auto;
+  padding-bottom: 3.75rem;
+}
+
+.padd-50{
+  padding-left: 3.125rem;
+  padding-right: 3.125rem;
+}
+
+.btn{
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.75rem 2.18rem;
+  background-color: rgb(86, 233, 233);
+  color: white;
+  border-radius: 2.5rem;
+  display: inline-block;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn:hover{
+  transform: scale(1.05);
+}
+
+.boton{
+  text-align: end;
+  margin-bottom: 1.5rem;
+}
+
+.title{
+  margin-top: 1.875rem;
+}
+
+.title h1{
+  font-size: 2.5rem;
+  color: rgb(104, 93, 93);
+  font-weight: 700;
+  position: relative;
+  text-align: center;
+}
+
+.table{
+  width: 100%;
+  border-collapse: collapse;
+  overflow:hidden;
+  border-radius: 0.75rem;
+}
+
+.container .tabla table{
+  margin: 0 auto;
+}
+
+.table thead{
+  background-color: rgb(86, 233, 233);
+}
+
+.table thead tr th{
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 600;
+  opacity:1;
+  vertical-align: top;
+  padding: 0.75rem;
+}
+
+.table tbody tr td{
+  font-size: 1rem;
+  font-weight: normal;
+  color: black;
+  background-color: white;
+  padding: 0.5rem;
+  text-align: center;
+  border-top: 1px solid gray;
+}
+
+.editar i{
+  color: rgb(34, 32, 32);
+}
+
+.eliminar i{
+  color: rgb(230, 15, 15);
+}
+
+
+/* busqueda */
+
+.busqueda input {
+  width: 200px;
+  height: 40px;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  background: rgb(219, 227, 237);
+  font-size: 1.2rem;
+
+}
+
+.busqueda button {
+  padding: 10px 10px;
+  margin-right: 2px;
+  border-radius: 2px;
+  color:rgb(54, 66, 228);
+  border: none;
+  cursor: pointer;
+  background: rgb(241, 242, 244);
+ 
+}
+
+.busqueda button:hover {
+  background: rgb(219, 227, 237);
+  border-radius: 10px;
+}
