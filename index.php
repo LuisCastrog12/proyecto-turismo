@@ -31,7 +31,7 @@
     <!--SEGUNDO BLOQUE-->
     <div class="bloque-cartas servicios">
         <div class="centrar">
-            <h4 class="texto-servicios">DISFRUTA DE ESTOS LUGARES MÁGICOS <br> PARA TI</h4><br>
+            <h4 class="texto-servicios">DISFRUTA DE ESTOS LUGARES MÁGICOS<br>PARA TI</h4><br>
         </div>
         <div class="centrar contenedores">
           <?php foreach($lugares as $row){?>
@@ -44,54 +44,33 @@
                 $imagen = "IMG/no-encontrada.jpg";
               }
             ?>
-            <img src="<?php echo $imagen;?>" alt="imagen cartagena" class="img-servicios">
+            <img src="<?php echo $imagen;?>" alt="imagen" class="img-servicios">
             <h5><?php echo $row['nombre']; ?></h5> <br> 
             <p>Tarifa dinámica <br> $ <?php echo number_format($row['precio'], 0, '.', ','); ?></p>
-            <input type="submit" name="reserva" value="Reservar" class="boton">
+            <div class="btn">
+              <a href="#" class="boton">Ver más</a>
+            </div>
           </div>
         <!-- FIN -->
         <?php }?>
         </div>
     </div>
 
-    <!--TERCER BLOQUE-->
-    <div class="contenedor-principal">
-        <div class="centrar">
-            <h4 class="texto-servicios">LO MÁS VISITADO</h4>
+    <!-- Modal segundo bloque-->
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <span class="close" id="close">&times;</span>
+        <h2 id="modal-title"></h2>
+        <div class="content-modal">
+          <p id="modal-content"></p>
         </div>
-
-        <!-- Swiper -->
-        <div class="container centrar">
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-container mySwiper">
-                <div class="swiper-wrapper">
-                    <?php foreach($visitado as $row) {
-                      $id = $row['id'];
-                      $imagen = "IMG/imagen-caja$id.jpg";
-                      if(!file_exists($imagen)){
-                        $imagen = "IMG/no-encontrada.jpg";
-                      }?>
-                      <div class="swiper-slide">
-                        <img src="<?php echo $imagen;?>" alt="">
-                        <div class="card-description">
-                          <div class="card-title">
-                            <h5><?php echo $row['nombre'];?></h5>
-                          </div>
-                          <div class="card-text">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis corporis dolores blanditiis consequuntur delectus laudantium.</p>
-                          </div>
-                          <div class="card-link">
-                            <a href="#">Reservar</a>
-                          </div>
-                        </div>
-                      </div>
-                    <?php }?>
-                </div>
-            </div>
+        <div class="modal-buttons">
+          <button class="reserve-button">Reservar</button>
+          <button class="cancel-button">Cancelar</button>
         </div>
       </div>
     </div>
+              <!-- bloque por definir -->
 
     <!--CUARTO BLOQUE-->
 
@@ -152,12 +131,15 @@
                         <a href="#" target="_blank">Politica de privacidad</a>
                     </li>
                 </ul>  
-                <span class="copyright">&copy;2022 Glup In</span>
+                <div class="span">
+                  <span class="copyright" id="currentYear">&copy; Glup In</span>
+                </div>
     </footer>
+      
 
 
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>  //libreria  de js para los carruseles
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="JS/index.js"></script>
 </body>
 

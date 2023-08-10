@@ -66,7 +66,93 @@ function register(){
 
 document.getElementById("btn__registrarse").addEventListener("click", register);
 
+// contraseña
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Cambiamos el estado inicial del ícono al cargar la página
+    const contrasenaInput = document.getElementById('contrasenaInput');
+    const iconoOjo = document.querySelector('.toggle-password');
+    iconoOjo.classList.remove('fa-eye');
+    iconoOjo.classList.add('fa-eye-slash');
+});
+
+// funcion para el efecto contraseña
+
+function mostrarContrasena() {
+    const contrasenaInput = document.getElementById('contrasenaInput');
+    const iconoOjo = document.querySelector('.toggle-password');
+
+    if (contrasenaInput.type === 'password') {
+        contrasenaInput.type = 'text';
+        iconoOjo.classList.remove('fa-eye-slash');
+        iconoOjo.classList.add('fa-eye');
+    } else {
+        contrasenaInput.type = 'password';
+        iconoOjo.classList.remove('fa-eye');
+        iconoOjo.classList.add('fa-eye-slash');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function(){
+    const contrasenaLogin = document.getElementById('contrasena-login');
+    const icon = document.querySelector('.toggle-icon');
+    icon.classList.remove('fa-eye');
+    icon.classList.add('fa-eye-slash');
+})
+
+function mostrarContrasenaLogin(){
+    const contrasenaLogin = document.getElementById('contrasena-login');
+    const icon = document.querySelector('.toggle-icon');
+
+    if(contrasenaLogin.type === 'password'){
+       contrasenaLogin.type = 'text';
+       icon.classList.remove('fa-eye-slash');
+       icon.classList.add('fa-eye');
+    } else {
+        contrasenaLogin.type = 'password';
+        icon.classList.remove('fa-eye');
+        icon.classList.add('fa-eye-slash');
+    }
+
+
+}
+
+function validarUsuario() {
+    var usuarioInput = document.getElementById("usuarioInput");
+    usuarioInput.value = usuarioInput.value.replace(/[^a-zA-Z0-9]/g, '');
+}
+
+// validacion formulario y campos
+
+function validarFormulario(){
+    
+    var contrasena = document.getElementById('contrasenaInput').value;
+
+    usuarioInput.addEventListener("input", function() {
+        this.value = this.value.replace(/[^a-zA-Z0-9]/g, '');
+    });
+   
+    var patern =  /^[a-zA-Z0-9!@#$%^&*]+$/;
+    if(!patern.test(contrasena)){
+        document.getElementById('mensajeContrasena').innerHTML = "La contraseña no puede contener espacios o caracteres especiales.";
+        return false; //Evitar el envío del formulario
+    } 
+    if(contrasena.length < 8){
+        document.getElementById("mensajeContrasena").innerHTML = "La contraseña debe tener al menos 8 caracteres.";
+        return false;
+    } else {
+        mensajeContrasena.innerHTML = ""; // Eliminar el mensaje de error si es válido
+      }  
+
+      const contrasenaInput = document.getElementById("contrasenaInput");
+      contrasenaInput.addEventListener("input", function() {
+        const mensajeContrasena = document.getElementById("mensajeContrasena");
+        mensajeContrasena.innerHTML = ""; // Eliminar el mensaje de error al seguir escribiendo
+      });
+
+    // Si todas las validaciones son exitosas, el formulario se enviará al servidor
+    return true;
+}
 
 
 

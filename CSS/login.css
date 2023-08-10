@@ -40,7 +40,7 @@ main {
     display: flex;
     justify-content: center;
     backdrop-filter: blur(20px);
-    background-color: rgba(89, 214, 228, 0.5);
+    background-color: rgb(129,196,196);
     border-radius: 5px;
 }
 
@@ -77,9 +77,8 @@ main {
 }
 
 .caja__trasera button:hover {
-    color: #46A2FD;
+    color: rgb(129,196,196);
     background: #fff;
-    border: none;
 }
 
 .caja__trasera-register p {
@@ -120,6 +119,16 @@ main {
     border-radius: 20px;
 }
 
+.contenedor__login-register .conten{
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor__login-register .conten a{
+    margin-top: 15px;
+    color: rgb(80, 131, 131);
+}
+
 /*Editamos texto*/
 
 .contenedor__login-register form h2 {
@@ -127,7 +136,7 @@ main {
     font-weight: bold;
     text-align: center;
     margin-bottom: 10px;
-    color: #46A2FD;
+    color: rgb(129,196,196);
 }
 
 .contenedor__login-register form input {
@@ -143,9 +152,9 @@ main {
 .contenedor__login-register form button {
     padding: 10px 40px;
     border: none;
-    margin-top: 40px;
+    margin-top: 20px;
     font-size: 14px;
-    background: #46A2FD;
+    background: rgb(129,196,196);
     color: #fff;
     cursor: pointer;
     outline: none;
@@ -155,9 +164,8 @@ main {
 }
 
 .contenedor__login-register form button:hover {
-    background: #ffffff;
-    color: #46A2FD;
-    border: 1px solid #46A2FD;
+    background: #d2dae0;
+    color: #7a98a7;
     transform: scale(1.05);
 }
 
@@ -166,6 +174,32 @@ main {
 .formulario__login {
     opacity: 1;
     display: block;
+}
+
+/* icono para contraseña de registrarse */
+.toggle-password {
+    position: absolute;
+    top: 343px;
+    left: 328px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+    color: #5c5d5e;
+}
+
+/* icono de contraseña para login */
+.toggle-icon{
+    position: absolute;
+    top: 224px;
+    left: 328px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+    color: #5c5d5e;
+}
+
+#contrasenaInput {
+    padding-left: 25px;
 }
 
 .formulario__register {
@@ -201,5 +235,115 @@ main {
     position: relative;
 }
 
+}
+
+/* pantallas mucho mas pequeñas */
+
+@media screen and (max-width: 410px){
+    .toggle-icon{
+        position: absolute;
+        top: 224px;
+        left: 310px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        z-index: 1;
+        color: #5c5d5e;
+    }
+}
+
+@media screen and (max-width: 393px){
+    .toggle-icon{
+        position: absolute;
+        top: 224px;
+        left: 300px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        z-index: 1;
+        color: #5c5d5e;
+    }
+}
+
+@media screen and (max-width: 390px){
+    .toggle-icon{
+        position: absolute;
+        top: 224px;
+        left: 300px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        z-index: 1;
+        color: #5c5d5e;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .toggle-icon{
+        position: absolute;
+        top: 224px;
+        left: 280px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        z-index: 1;
+        color: #5c5d5e;
+    }
+}
+
+@media screen and (max-width: 360px){
+    .toggle-icon{
+        position: absolute;
+        top: 224px;
+        left: 270px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        z-index: 1;
+        color: #5c5d5e;
+    }
+}
+
+@media screen and (max-width: 355px){
+    .toggle-icon{
+        position: absolute;
+        top: 224px;
+        left: 260px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        z-index: 1;
+        color: #5c5d5e;
+    }
+}
+
+@media screen and (max-width: 340px){
+    .toggle-icon{
+        position: absolute;
+        top: 224px;
+        left: 240px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        z-index: 1;
+        color: #5c5d5e;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .toggle-icon{
+        position: absolute;
+        top: 224px;
+        left: 230px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        z-index: 1;
+        color: #5c5d5e;
+    }
+}
+
+@media screen and (max-width: 280px){
+    .toggle-icon{
+        position: absolute;
+        top: 224px;
+        left: 190px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        z-index: 1;
+        color: #5c5d5e;
+    }
 }
    
